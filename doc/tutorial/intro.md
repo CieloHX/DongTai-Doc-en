@@ -1,27 +1,27 @@
-> 交互式应用程序安全测试（Interactive Application Security Testing）是2012年Gartner公司提出的一种新的应用程序安全测试方案，通过代理、VPN或者在服务端部署Agent程序，收集、监控Web应用程序运行时函数执行、数据传输，并与扫描器端进行实时交互，高效、准确的识别安全缺陷及漏洞，同时可准确确定漏洞所在的代码文件、行数、函数及参数。IAST相当于是DAST和SAST结合的一种互相关联运行时安全检测技术
+> Interactive Application Security Testing (Interactive Application Security Testing) is a new application security testing program proposed by Gartner in 2012. It collects and monitors the runtime functions of Web applications through agents, VPNs or deploying Agent programs on the server. Execution, data transmission, and real-time interaction with the scanner, efficiently and accurately identify security flaws and vulnerabilities, and accurately determine the code files, lines, functions, and parameters where the vulnerabilities are located. IAST is equivalent to a combination of DAST and SAST, an interrelated runtime security detection technology
 
-2021年，“灵芝IAST”升级为“火线～洞态IAST”，提供更优质的漏洞检测能力、产品使用体验及服务，同步推出独立的SaaS版本产品，可[前往](/doc/tutorial/quickstart)快速开始页面，了解如何使用。
+In 2021, "LingZhi IAST" upgraded to "HuoXian~ DongTai IAST", providing better vulnerability detection capabilities, product experience and services, and simultaneously launching independent SaaS version products. [Go](/doc/tutorial/quickstart ) Quick start page to learn how to use it.
 
-## IAST分类
-- 主动式IAST
-- 被动式IAST
- 
-#### 主动式IAST
-主动式IAST通过在被测试应用程序中部署Agent，然后使用外部扫描器触发流量由agent进行捕获、检测是否存在漏洞
+## IAST Categories
+- Positive IAST
+- Passive IAST
 
-#### 被动式IAST
-被动式IAST通过在被测试应用程序中部署Agent，然后获取程序执行的代码上下文信息及数据流向，根据数据流向及程序执行的代码上下文信息梳理污点链路，判断是否存在漏洞
+#### Positive IAST
+Positive IAST deploys the agent in the application under test, and then uses an external scanner to trigger traffic to be captured by the agent to detect whether there are vulnerabilities.
+
+#### Passive IAST
+Passive IAST deploys the Agent in the application under test, then obtains the code context information and data flow of the program execution, combs the tainted links according to the data flow and the code context information of the program execution, and detect whether there are vulnerabilities.
 
 
-## 火线～洞态IAST
-1.“火线～洞态IAST”属于被动式IAST，具有近实时检测、高检出率、低误报率、低漏报率等优点；
+## HuoXian~ DongTai IAST
+1."HuoXian~ DongTai IAST"  is  passive IAST, which with the advantages of near real-time detection, high detection rate, low false alarm rate, low false alarm rate, etc.
 
-2.“火线～洞态IAST”不需要重放数据包，可覆盖加密、防重放、验证码等真实业务场景；
+2.“HuoXian~ DongTai IAST” don't need replace the data packets，could cover encryption , anti-replay , Verification code etc real Business scene.
 
-3.“火线～洞态IAST”不产生脏数据，不对测试人员工作造成干扰
+3.“HuoXian~ DongTai IAST” don't produce "dirty data"，don't interfere the work of test.
 
-## IAST与RASP的区别
-- rasp用于生产环境，hook污点输入方法和危险方法，检测是否存在漏洞并拦截；不负责完整的污点调用链，检测方法主要是值匹配和一些语法解析、语义分析
-- iast用于测试环境，hook污点输入方法、污点传播方法和危险方法，根据值匹配算法和污点传播算法判断是否存在漏洞
-- 简言之，rasp用于分析是否存在来自外部污点的攻击数据；iast用于分析是否存在来自外部污点的一条攻击利用链
-- 在SDLC中，IAST是开发阶段的工具，RASP是上线后的工具；两款工具的底层技术原理相同，产品侧重点、检测原理均有所不同
+## The Differences between IAST and RASP
+- rasp is used in the production environment to hook taint input methods and dangerous methods, detect whether there are loopholes and intercept; it is not responsible for the complete taint call chain, the detection methods are mainly value matching and some syntax analysis and semantic analysis
+- iast is used in the test environment, hooks the taint input method, the taint propagation method and the dangerous method, and judges whether there are vulnerabilities based on the value matching algorithm and the taint propagation algorithm
+- In short, rasp is used to analyze whether there is attack data from external taints; iast is used to analyze whether there is an attack exploit chain from external taints.
+- In SDLC, IAST is a tool in the development phase, and RASP is a tool after it goes online; the underlying technical principles of the two tools are the same, and the product focus and detection principles are different
