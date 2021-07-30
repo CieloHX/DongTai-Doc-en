@@ -1,31 +1,32 @@
-> 洞态IAST的版本、功能、架构和部署方案
+> The version, function, technical architecture and deployment scenario of the DongTai IAST
 
-## 简介
-洞态IAST包含前端项目和后端API，前端项目基于`Vue`、`TypeScript`开发，后端项目基于`Django`、`Django Rest Framework`开发。包括：策略搜索、项目列表、项目详情、新建项目、导出项目漏洞、应用漏洞管理、第三方组件管理、Agent管理、Hook规则管理、用户管理等功能。
+## Introduction
+DongTai IAST includes front-end projects and back-end APIs. The front-end projects are developed based on `Vue`、`TypeScript`, and the back-end projects are developed based on `Django`、`Django Rest Framework`. including: strategy search、project list、project details、creat project、export project vulnerabilities、application vulnerability management、third-party component management、agent management、Hook rule management、user management and other functions。
 
-#### 架构图
+#### Architecture diagram
 <img src="/DongTaiDoc/doc/assets/deploy/framework.png" style="width: 850px;height: 500px;">
 
-## 版本
-洞态IAST有两个版本：
-- SaaS版本
-- 本地化部署版本 
+## Version
+There are two versions of DongTai IAST: 
 
-### SaaS版本
-SaaS版本地址：[https://iast.huoxian.cn](https://iast.huoxian.cn)
+- SaaS version
+- Localized deployment version
 
-### 本地化部署版本 【针对联合共建的企业进行开源】
-开源版本需要自行申请，申请方式见[下文](doc/tutorial/versions?id=申请方式)
+### SaaS version
+SaaS version URL address：[https://iast.huoxian.cn](https://iast.huoxian.cn)
 
-#### 单机版部署
+### Localized deployment version [Open source for companies which Joint development]
+The open source version needs to be applied for by yourself, please refer to the application method. [Below](doc/tutorial/versions?id=申请方式)
 
-- [x] [docker-compose一键部署](https://github.com/HXSecurity/DongTai/tree/main/deploy/docker-compose)
-- [x] [源码一键部署](https://github.com/HXSecurity/DongTai#%E4%B8%80%E9%94%AE%E6%BA%90%E7%A0%81%E9%83%A8%E7%BD%B2docker%E7%8E%AF%E5%A2%83)
-- [ ] docker一键部署方案待更新
+#### Stand-alone deployment
 
-#### 集群版部署
+- [x] [docker-compose One-Click deployment](https://github.com/HXSecurity/DongTai/tree/main/deploy/docker-compose)
+- [x] [Source code One-Click deployment](https://github.com/HXSecurity/DongTai#%E4%B8%80%E9%94%AE%E6%BA%90%E7%A0%81%E9%83%A8%E7%BD%B2docker%E7%8E%AF%E5%A2%83)
+- [ ] Docker One-Click deployment plan to be updated
 
-- [x] [Kubernetes版本一键部署](https://github.com/HXSecurity/DongTai/blob/main/deploy/kubernetes)
+#### Cluster deployment
 
-#### 申请方式
-洞态IAST合作伙伴计划—整体开源联合开发，[报名地址](https://jinshuju.net/f/PKPl99)
+- [x] [Kubernetes version One-Click deployment](https://github.com/HXSecurity/DongTai/blob/main/deploy/kubernetes)
+
+#### How to apply
+the Partner program of DongTai — Joint development，[Registration URL address](https://jinshuju.net/f/PKPl99)
