@@ -1,40 +1,40 @@
 > JBossAS 6
 
-#### Linux-手动修改
+#### Linux-Manual modification
 
-##### 1.安装 agent.jar
+##### 1. Install agent.jar
 
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
+ [IAST platform](https://iast.huoxian.cn/login) Download the agent of the hole state IAST in **Deploy IAST**, put the agent.jar file on the machine where the WEB server (middleware) is located, and ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
 
-##### 2.部署
-进入JBoss容器的主目录，在`bin/run.sh`文件中找到`# Setup JBoss specific properties`所在行，在该行的下面插入如下行：
-
-```shell
-JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<project name>
-```
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
-
-> JBossAS 7、JBossWildfly
-
-#### Linux-手动修改
-
-##### 1.安装 agent.jar
-
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
-
-##### 2.部署
-
-进入JBoss容器的主目录，根据当前服务器的启动类型：standalone、domain修改对应的配置文件
-
-**Standalone模式**
-打开`bin/standalone.sh`文件，定位`# Display our environment`所在的行，在其上方插入自定义配置，如下：
+##### 2. Deployment
+Enter the main content of the JBoss container, find the line where `# Setup JBoss specific properties` is located in the `bin/run.sh` file, and insert the following line below the line:
 
 ```shell
 JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<project name>
 ```
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
+
+> JBossAS 7, JBossWildfly
+
+#### Linux-Manual modification
+
+##### 1. Install agent.jar
+
+Log in to [IAST platform](https://iast.huoxian.cn/login) and download the IAST Agent in the **Deploy IAST**, and put the agent.jar file on the machine where the WEB server (middleware) is located, Ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
+
+##### 2. Deployment
+
+Enter the home content of the JBoss container and modify the corresponding configuration file according to the startup type of the current server: standalone, domain
+
+**Standalone mode**
+Open the `bin/standalone.sh` file, locate the line where `# Display our environment` is located, and insert the custom configuration above it, as follows:
+
+```shell
+JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<project name>
+```
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
 
-**domain模式**
+**domain mode**
 
-当前版本为社区版本，不建议在domain模式下安装Agent
+The current version is the community version, it is not recommended to install Agent in domain mode

@@ -1,20 +1,19 @@
-> Jar包启动方式
+> How to start the Jar package
 
-#### 手动安装
+#### Manual installation
 
-##### 1.安装 Agent
+##### 1. Install Agent
 
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
+Log in to [IAST platform](https://iast.huoxian.cn/login) and download the agent of IAST in the **Deploy IAST**, and put the agent.jar file on the machine where the WEB server (middleware) is located, Ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
  
-##### 2.配置 Agent
+##### 2. Configure Agent
 
 
-- 如果使用war包的方式部署，agent的安装方式为具体中间件的安装方式
+-If you use the war package to deploy, the agent installation method is the specific middleware installation method
   
-- 如果使用`java -jar app.jar`的方式部署，则在启动命令中增加启动参数`-javaagent:/path/to/agent.jar`即可，如：
+-If you use `java -jar app.jar` to deploy, add the startup parameter `-javaagent:/path/to/agent.jar` to the startup command, such as
 ```shell
 java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar app.jar
 ```
 
-- 注意：`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
-
+-Note: `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.

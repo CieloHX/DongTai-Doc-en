@@ -1,17 +1,17 @@
-#### 手工修改
 
-##### 1.安装Agent.jar
+#### Manual modification
 
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
+##### 1. Install Agent.jar
+
+Log in to [IAST platform](https://iast.huoxian.cn/login) and download the Agent of IAST in the **Deploy IAST**, and put the agent.jar file on the machine where the WEB server (middleware) is located, Ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
  
-##### 2.部署
-1.进入jetty的主目录
+##### 2. Deployment
+1. Enter the main content of jetty
 
-2.打开`bin/jetty.sh`文件，找到`Add jetty properties to Java VM options.`所在行
+2. Open the `bin/jetty.sh` file and find the line of `Add jetty properties to Java VM options.`
 
-3.在改行的下面插入`JAVA_OPTIONS+=( "-javaagent:/path/to/agent.jar --Dproject.name=<project name>")`
+3. Insert `JAVA_OPTIONS+=( "-javaagent:/path/to/agent.jar --Dproject.name=<project name>")` under the changed line
 
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
-4.重启jetty服务器
-
+4. Restart the jetty server

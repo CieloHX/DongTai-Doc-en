@@ -1,50 +1,50 @@
-#### 手动修改
-> 非集群模式
+#### Manual modification
+> Non-cluster mode
 
-##### 1.安装Agent.jar
+##### 1. Install Agent.jar
 
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
+Log in to [IAST platform](https://iast.huoxian.cn/login) and download the IAST Agent in the **Deploy IAST**, and put the agent.jar file on the machine where the WEB server (middleware) is located, Ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
 
-##### 2.部署Agent
+##### 2. Deploy the Agent
 
-进入`WebLogic`目录，打开`bin/startWebLogic.sh`文件，找到`JAVA_OPTIONS="${SAVE_JAVA_OPTIONS}"`所在行，在该行的下面增加一行
+Enter the `WebLogic` content, open the `bin/startWebLogic.sh` file, find the line where `JAVA_OPTIONS="${SAVE_JAVA_OPTIONS}"` is located, and add a line below the line
 ```shell
 JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<project name>
 ```
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
  
-> 集群模式
+> Cluster Mode
 
-#### 方式一、通过WebLogic的console控制台
+#### Method one, through the WebLogic console
 
-访问weblogic的console，例如：
+Visit weblogic's console, for example:
 
-1.找到“环境”下的“服务器”，然后在服务器列表中点击需要安装agent的服务器，如：AdminServer
+1. Find "Server" under "Environment", and then click on the server that needs to install agent in the server list, such as AdminServer
 
 ![adminserver.png](../assets/deploy/weblogic/adminserver.png)
 
-2.进入服务器详情，点击“服务器启动”，在下方的参数一栏中填入javaagent的参数
+2. Enter the server details, click "Server Start", and fill in the parameters of javaagent in the parameter column below
 ```shell
 JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<project name>
 ```
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
 
 ![adminserver.png](../assets/deploy/weblogic/boot.png)
 
-3.重启服务器，使配置生效
+3. Restart the server to make the configuration take effect
 
 ![adminserver.png](../assets/deploy/weblogic/restart.png)
 
-#### 方式二、通过修改weblogic的config.xml文件
+#### Method two, by modifying weblogic's config.xml file
 
-##### 1.安装Agent.jar
+##### 1. Install Agent.jar
 
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
+Log in to [IAST platform](https://iast.huoxian.cn/login) and download the IAST Agent in the **Deploy IAST**, and put the agent.jar file on the machine where the WEB server (middleware) is located, Ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
 
-##### 部署Agent
-找到`/u01/oracle/weblogic/user_projects/domains/base_domain/config`目录下的`config.xml`文件，定位到`<server-start>`标签下的`<arguments>`标签，在标签内添加如下配置：
+##### Deploy Agent
+Find the `config.xml` file in the `/u01/oracle/weblogic/user_projects/domains/base_domain/config` content, locate the `<arguments>` tag under the `<server-start>` tag, and add it in the tag Configure as follows:
 `-javaagent:/path/to/agent.jar -Dproject.name=<project name>`
 
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
