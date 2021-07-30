@@ -1,32 +1,38 @@
-> 快速开始
+> quick start
 
-“火线～洞态IAST” 提供github中流行Java项目的污点链，可以直接搜索sink点进行漏洞发现，下面以**Spring Security OAuth2 远程命令执行漏洞（CVE-2016-4977）**为例，介绍如何直接使用IAST检出该漏洞。
+Huoxian～DongTai IAST’ provides the taint chain of popular Java projects in github. You can directly search for sink point to find vulnerabilities. The following will introduce how to directly use IAST to detect this hole by the example of remote command ***\*Spring Security OAuth2\**** to execute vulnerability.
 
-### 代码审计挖掘0 Day的条件
-- 应用环境
-- 熟悉触发漏洞的方法（sink点）
-- 花时间去分析污点链
-- 想办法绕过框架、系统的一些限制（该步骤不一定有）
+### Conditions for code auit mining 0 Day
+- Application Environment
 
-为了提升师傅们挖掘漏洞的效率，更快的挖掘漏洞，特开放如下功能：
-- 搭建github star>2k的Java项目，用于师傅们测试，避免重复搭建环境；
-- 自动爬取上述项目中的接口，触发流量，产生污点调用链
-- 开放搜索功能，支持对上述全项目的污点调用链进行搜索，发现一条sink点，可直接搜索所有项目，查看所有命中的漏洞
+- Know how to trigger the vulnerability(sink point)
 
-现在，师傅们只需要专注于代码审计，轻松挖掘漏洞。
+- Take time to analyze the taint chain
 
-### 漏洞搜索
-**洞态IAST**搜索功能：[https://iast.huoxian.cn/taint/search](https://iast.huoxian.cn/taint/search)
- 
-1. 指定漏洞触发的sink方法，如：`org.springframework.expression.Expression.getValue`，然后搜索，可以找到存在该sink方法的污点调用链所在的HTTP请求
+- Find a way to bypass some limitations of the framework and the system(may could skip this step)
+
+In order to improve the efficiency of digging vulnerabilities and to dig vulnerabilities faster, open the following functions specially:
+- Build a Java project which has the stars more than 2k in github to give programmers to test and avoid repeated setting up of the environment
+
+- Automatically crawl the interfaces in the above projects, trigger traffic, and generate tainted call chains
+
+- Open search function, and support to search the stain call chain of the above-mentioned all items.  If find a sink point, we could search all items directly and view all hit vulnerabilities
+
+Now, the programmers could focus on code audits and easily discover vulnerabilities.
+
+### Vulnerability search
+**DongTai IAST** search function: [***\*https://iast.huoxian.cn/taint/search\****](https://iast.huoxian.cn/taint/search)
+
+1. 指\1. Specify the vulnerability sink method, such as:  org.springframework.expression.Expression.getValue, then search and we could find the HTTP request where the tainted call chain of the sink method is located
 ![spring-el](../../doc/assets/bugbountry/search_result.png)
 
-2. 找到相关的HTTP请求后，根据`agent`的名称判断当前HTTP属于哪个开源项目，这里搜索的HTTP请求分别来自vulapps的`spring-webflow`靶场和vulfocus的`cve-2016-4977`靶场
+2. After finding the relevant HTTP request, according to the name of agent to judge current HTTP belongs to which open source project
 
-3. 查看**污点调用链**的详情及**HTTP请求**的详细内容
+3. View the details of the tainted call chain and the details of the HTTP request
 ![taint_link_detail](../../doc/assets/bugbountry/taint_link_detail.png)
 
-然后根据节点的提示，找到**污点**传播的具体流程及每一个方法的上层调用，可用于快速验证和复现漏洞是否存在其他限制。
+Then according to the prompt of the node, find the specific process of the taint propagation and the upper call of the each method, which could be used to quickly verify and reproduce whether there are other restrictions on the vulnerability.
 
-### 自建项目的漏洞检测
-代码审计前，可以把**洞态IAST**的agent安装在项目中，在代码审计和不停调试的过程中，发现更多的sink点和漏洞。
+### Vulnerability detection for self-built projects
+Before the code audit, you can install the agent of Hole State IAST in the project. During the code audit and continuous debugging, more sink points and vulnerabilities could be found.
+
