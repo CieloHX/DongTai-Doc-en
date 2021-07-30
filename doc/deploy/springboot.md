@@ -8,7 +8,6 @@ Log in to [IAST platform](https://iast.huoxian.cn/login) and download the agent 
  
 ##### 2. Configure Agent
 
-
 -If you use the war package to deploy, the agent installation method is the specific middleware installation method
   
 -If you use `java -jar app.jar` to deploy, add the startup parameter `-javaagent:/path/to/agent.jar` to the startup command, such as

@@ -1,4 +1,4 @@
-The built-in hook points can meet most situations, but in order to explore the vulnerabilities outside the built-in strategy, custom hook points(source point, propagation point, sink point) must be involved; The following describes the relevant content of the hook point configuration of the Hole State IAST.
+The built-in hook points can meet most situations, but in order to explore the vulnerabilities outside the built-in strategy, custom hook points(source point, propagation point, sink point) must be involved; The following describes the relevant content of the hook point configuration of the DongTai IAST.
 
 ### Custom Hook Rules
 
@@ -9,15 +9,15 @@ Custom rule: https://iast.huoxian.cn/setting/hookRule
 Rule classification: 
 - Stain source method rules(source method): detect the data from http request, rules are built in the agent and no need to do any configuration.
 
-- Propagation method rules: used to deal with the situation that some taints are not related. If the internal logic of the method is too complicated to automatically recognize the taint changes,  that could be fixed by configuring the propagation path
+- Propagation method rules: used to deal with the situation that some taints are not related. If the internal logic of the method is too complicated to automatically recognize the taint changes, that could be fixed by configuring the propagation path
 
-- Filter method rule:  being used to exclude false positives and dig 0 day,  generally do not need to configure that rule
+- Filter method rule: being used to exclude false positives and dig 0 day, generally do not need to configure that rule
 
-- Dangerous method rules(sink method):  need custom rules to trigger vulnerability method
+- Dangerous method rules(sink method): need custom rules to trigger vulnerability method
 
 #### Create rules for interfaces
 
-**Scenario: **
+**Scenario:**
 
 We found that there are a large number of deserialization vulnerabilities caused by reading object methods in the open source of Java framework. Through the in-depth analysis, finding that most of class inherit from the InputStream interface and implement the reading method. So I don’t want to add a rule for each class, since the objects of these rules are repeated and the added object will increase the maintenance cost. So, how to solve the vulnerability IAST?
 
@@ -28,5 +28,5 @@ The rule of the DongTai IAST supports the setting of inheritance of relationship
 
 
 ### N Day vulnerability cannot be detected and troubleshooting
-If you find that the vulnerabilities of historical N Day cannot be detected, you can contact [technical support](/doc/aboutus/support) for help or debug the history of vulnerabilities in order to research.
+If you find that the vulnerabilities of historical N Day cannot be detected, you can contact [technical support](../../doc/aboutus/support) for help or debug the history of vulnerabilities in order to research.
 

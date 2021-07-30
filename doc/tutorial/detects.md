@@ -11,7 +11,7 @@
 - [x] XXE
 - [x] Unsafe readline
 - [x] Unsafe redirection
-- [x] Unsafe forwarding路径穿越
+- [x] Unsafe forwarding path traversal
 - [x] Weak encryption algorithm
 - [x] weak hash algorithm
 - [x] Weak random number algorithm

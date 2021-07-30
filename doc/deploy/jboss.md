@@ -4,7 +4,7 @@
 
 ##### 1. Install agent.jar
 
- [IAST platform](https://iast.huoxian.cn/login) Download the agent of the hole state IAST in **Deploy IAST**, put the agent.jar file on the machine where the WEB server (middleware) is located, and ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
+ [IAST platform](https://iast.huoxian.cn/login) Download the agent of the DongTai IAST in **Deploy IAST**, put the agent.jar file on the machine where the WEB server (middleware) is located, and ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
 
 ##### 2. Deployment
 Enter the main content of the JBoss container, find the line where `# Setup JBoss specific properties` is located in the `bin/run.sh` file, and insert the following line below the line:
