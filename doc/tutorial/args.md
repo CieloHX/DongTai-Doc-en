@@ -1,5 +1,7 @@
 # Agent args
 
+## Parameter Table
+
 ### debug
 
 |   Attribute   | Value                                                           |
@@ -142,3 +144,43 @@
 | Optional Parameter |                                     |
 |  Default Value  | http://openapi.iast.huoxian.cn:8000 |
 | Parameter Meaning | <div style="width: 300pt">server url                          |
+
+## Test Case
+
+> Take the test project spring demo as an example.
+
+### 1. When you need to specify a project name:
+
+```
+java -javaagent:/path/to/agent.jar -Dproject.name=SpringDemo -jar SpringDemo.jar
+```
+
+### 2. When the agent needs to be debugged:
+
+```
+java -javaagent:/path/to/agent.jar -Ddebug.name=true -jar SpringDemo.jar
+```
+
+### 3. When it is necessary to set the agent delay start time:
+
+```
+java -javaagent:/path/to/agent.jar -Diast.engine.delay.time=15 -jar SpringDemo.jar
+```
+
+### 4. When the bytecode file needs to be viewed:
+
+```
+java -javaagent:/path/to/agent.jar -Diast.dump.class.enable=true -jar SpringDemo.jar
+```
+
+### 5. When the HTTP proxy needs to be set:
+
+```
+java -javaagent:/path/to/agent.jar -Diast.proxy.enable=true -Diast.proxy.host=127.0.0.1 -Diast.proxy.host=80 -jar SpringDemo.jar
+```
+
+### 6. When the detection capability needs to be set:
+
+```
+java -javaagent:/path/to/agent.jar -Diast.mode=hunter -jar SpringDemo.jar
+```
