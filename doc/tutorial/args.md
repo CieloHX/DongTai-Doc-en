@@ -1,10 +1,12 @@
 # Agent args
 
+## Parameter Table
+
 ### debug
 
 |   Attribute   | Value                                                           |
 | :------: | :----------------------------------------------------------- |
-| Effective Way | Restart the application, add “-Ddebug=”  when starting an application                          |
+| Effective Way | Restart the application, add `-Ddebug=<true or false>`  when starting an application                          |
 | Parameter Type | Boolean                                                      |
 |   Source   | Command line arguments                                                   |
 | Optional Parameter | true｜false                                                  |
@@ -15,7 +17,7 @@
 
 |   Attribute   | Value                                        |
 | :------: | :---------------------------------------- |
-| Effective Way | Restart the application, add “-Dproject.name=” when starting an application |
+| Effective Way | Restart the application, add `-Dproject.name=<Demo>` when starting an application |
 | Parameter Type | String                                    |
 |   Source   | Configuration file                                  |
 | Optional Parameter | Any String                                |
@@ -26,7 +28,7 @@
 
 |   Attribute   | Value                                                           |
 | :------: | :----------------------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.mode=” when starting an application                       |
+| Effective Way | Restart the application, add `-Diast.mode=<hunter or normal>` when starting an application                       |
 | Parameter Type | String                                                       |
 |   Source   | Configuration file                                                     |
 | Optional Parameter | hunter, normal                                               |
@@ -37,7 +39,7 @@
 
 |   Attribute   | Value                                                           |
 | :------: | :----------------------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.server.mode=” when starting an application                |
+| Effective Way | Restart the application, add `-Diast.server.mode=<local or remote>` when starting an application                |
 | Parameter Type | String                                                       |
 |   Source   | Configuration file                                                     |
 | Optional Parameter | local, remote                                                |
@@ -48,7 +50,7 @@
 
 |   Attribute   | Value                                             |
 | :------: | :--------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.proxy.enable=” when starting an application |
+| Effective Way | Restart the application, add `-Diast.proxy.enable=<true or false>` when starting an application |
 | Parameter Type | Boolean                                        |
 |   Source   | Configuration file                                       |
 | Optional Parameter | true, false                                    |
@@ -59,7 +61,7 @@
 
 |   Attribute   | Value                                           |
 | :------: | :------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.proxy.host=” when starting an application |
+| Effective Way | Restart the application, add `-Diast.proxy.host=<ip>` when starting an application |
 | Parameter Type | String                                       |
 |   Source   | Configuration file                                     |
 | Optional Parameter |                                              |
@@ -70,7 +72,7 @@
 
 |   Attribute   | Value                                           |
 | :------: | :------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.proxy.port=” when starting an application |
+| Effective Way | Restart the application, add `-Diast.proxy.port=<port>` when starting an application |
 | Parameter Type | String                                       |
 |   Source   | Configuration file                                     |
 | Optional Parameter |                                              |
@@ -81,7 +83,7 @@
 
 |   Attribute   | Value                                                        |
 | :------: | :-------------------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.service.report.interval=” when starting an application |
+| Effective Way | Restart the application, add `-Diast.service.report.interval=<60000>` when starting an application |
 | Parameter Type | Integer                                                  |
 |   Source   | Configuration file                                                  |
 | Optional Parameter | Any integer number                                              |
@@ -92,7 +94,7 @@
 
 |   Attribute   | Value                                                        |
 | :------: | :-------------------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.service.replay.interval=” when starting an application |
+| Effective Way | Restart the application, add `-Diast.service.replay.interval=<300000>` when starting an application |
 | Parameter Type | Integer                                                  |
 |   Source   | Configuration file                                                  |
 | Optional Parameter | Any integer number                                              |
@@ -103,7 +105,7 @@
 
 |   Attribute   | Value                                                  |
 | :------: | :-------------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.engine.delay.time=” when starting an application |
+| Effective Way | Restart the application, add `-Diast.engine.delay.time=<10>` when starting an application |
 | Parameter Type | Integer                                            |
 |   Source   | Configuration file                                            |
 | Optional Parameter | Any integer number                                        |
@@ -114,7 +116,7 @@
 
 |   Attribute   | Value                                                  |
 | :------: | :-------------------------------------------------- |
-| Effective Way | Restart the application, add “-Diast.dump.class.enable=” when starting an application |
+| Effective Way | Restart the application, add `-Diast.dump.class.enable=<true or false>` when starting an application |
 | Parameter Type | Boolean                                             |
 |   Source   | Configuration file                                            |
 | Optional Parameter | true, false                                         |
@@ -132,50 +134,6 @@
 |  Default Value  | /tmp/iast-class-dump/ |
 | Parameter Meaning | <div style="width: 300pt">Path to dump bytecode     |
 
-### iast.name
-
-|   Attribute   | Value                       |
-| :------: | :----------------------- |
-| Effective Way | Restart the application                 |
-| Parameter Type | String                   |
-|   Source   | Configuration file                 |
-| Optional Parameter | lingzhi-Enterprise 1.0.0 |
-|  Default Value  | lingzhi-Enterprise 1.0.0 |
-| Parameter Meaning | <div style="width: 300pt">iast name                |
-
-### iast.version
-
-|   Attribute   | Value           |
-| :------: | :----------- |
-| Effective Way | Restart the application     |
-| Parameter Type | String       |
-|   Source   | Configuration file     |
-| Optional Parameter | 1.0.0        |
-|  Default Value  | 1.0.0        |
-| Parameter Meaning | <div style="width: 300pt">iast version |
-
-### iast.response.name
-
-|   Attribute   | Value                 |
-| :------: | :----------------- |
-| Effective Way | Restart the application           |
-| Parameter Type | String             |
-|   Source   | Configuration file           |
-| Optional Parameter | lingzhi            |
-|  Default Value  | lingzhi            |
-| Parameter Meaning | <div style="width: 300pt">iast response name |
-
-### iast.response.value
-
-|   Attribute   | Value                 |
-| :------: | :----------------- |
-| Effective Way | Restart the application           |
-| Parameter Type | String             |
-|   Source   | Configuration file           |
-| Optional Parameter | lingzhi            |
-|  Default Value  | lingzhi            |
-| Parameter Meaning | <div style="width: 300pt">iast response name |
-
 ### iast.server.url
 
 |   Attribute   | Value                                  |
@@ -187,68 +145,42 @@
 |  Default Value  | http://openapi.iast.huoxian.cn:8000 |
 | Parameter Meaning | <div style="width: 300pt">server url                          |
 
-### iast.server.token
+## Test Case
 
-|   Attribute   | Value         |
-| :------: | :--------- |
-| Effective Way | Restart the application   |
-| Parameter Type | String     |
-|   Source   | Configuration file   |
-| Optional Parameter |            |
-|  Default Value  |            |
-| Parameter Meaning | <div style="width: 300pt">User's Token |
+> Take the test project spring demo as an example.
 
-### iast.allhook.enable
+### 1. When you need to specify a project name:
 
-|   Attribute   | Value       |
-| :------: | :------- |
-| Effective Way | Restart the application |
-| Parameter Type | Boolean  |
-|   Source   | Configuration file |
-| Optional Parameter |          |
-|  Default Value  | false    |
-| Parameter Meaning | <div style="width: 300pt">         |
+```
+java -javaagent:/path/to/agent.jar -Dproject.name=SpringDemo -jar SpringDemo.jar
+```
 
-### app.name
+### 2. When the agent needs to be debugged:
 
-|   Attribute   | Value       |
-| :------: | :------- |
-| Effective Way | Restart the application |
-| Parameter Type | String   |
-|   Source   | Configuration file |
-| Optional Parameter |          |
-|  Default Value  | LingZhi  |
-| Parameter Meaning | <div style="width: 300pt">app name |
+```
+java -javaagent:/path/to/agent.jar -Ddebug.name=true -jar SpringDemo.jar
+```
 
-### engine.status
+### 3. When it is necessary to set the agent delay start time:
 
-|   Attribute   | Value       |
-| :------: | :------- |
-| Effective Way | Restart the application |
-| Parameter Type | String   |
-|   Source   | Configuration file |
-| Optional Parameter |          |
-|  Default Value  |          |
-| Parameter Meaning | <div style="width: 300pt">engine status |
+```
+java -javaagent:/path/to/agent.jar -Diast.engine.delay.time=15 -jar SpringDemo.jar
+```
 
-### engine.name
+### 4. When the bytecode file needs to be viewed:
 
-|   Attribute   | Value       |
-| :------: | :------- |
-| Effective Way | Restart the application |
-| Parameter Type | String   |
-|   Source   | Configuration file |
-| Optional Parameter |          |
-|  Default Value  |          |
-| Parameter Meaning | <div style="width: 300pt">engine name |
+```
+java -javaagent:/path/to/agent.jar -Diast.dump.class.enable=true -jar SpringDemo.jar
+```
 
-### jdk.version
+### 5. When the HTTP proxy needs to be set:
 
-|   Attribute   | Value       |
-| :------: | :------- |
-| Effective Way | Restart the application |
-| Parameter Type | String   |
-|   Source   | Configuration file |
-| Optional Parameter |          |
-|  Default Value  |          |
-| Parameter Meaning | <div style="width: 300pt">jdk version  |
+```
+java -javaagent:/path/to/agent.jar -Diast.proxy.enable=true -Diast.proxy.host=127.0.0.1 -Diast.proxy.host=80 -jar SpringDemo.jar
+```
+
+### 6. When the detection capability needs to be set:
+
+```
+java -javaagent:/path/to/agent.jar -Diast.mode=hunter -jar SpringDemo.jar
+```
