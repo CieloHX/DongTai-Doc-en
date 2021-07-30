@@ -143,7 +143,7 @@ The cloud accepts the method pool reported by the **Agent**, calculates the meth
 
 **As shown in the picture below**
 
-![method_flow_chart](../assets/features/method_flow_charts.png)
+![method_flow_chart](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/method_flow_charts.png)
 
 **Strategy**
 
