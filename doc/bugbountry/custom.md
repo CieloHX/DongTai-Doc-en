@@ -23,10 +23,10 @@ We found that there are a large number of deserialization vulnerabilities caused
 
 The rule of the DongTai IAST supports the setting of inheritance of relationships, which could be set to: only detect the current class and current subclasses, meanwhile, the agent will do a deep analysis of the inheritance relationship of each class, and sort out all parent classes and interface for the current class(The parent class of parent class and its interfaces can also be sorted out, and in the same way, it will be finished at the level of the subclasses of Object); then, when the hook rule is matched, the current class or its inherited classes and interfaces will be searched according to the configured inheritance relationship to judge whether the hook rule is hit. Therefore, in the above scenario, directly set the inheritance relationship to merely subclasses pointing to the methods of interface `java.io.ObjectInput.readObject()`.
 
-![interface demo](../../doc/assets/bugbountry/interface_demo.png)
+![interface demo](https://hxsecurity.github.io/DongTai-Doc/doc/assets/bugbountry/interface_demo.png)
 
 
 
 ### N Day vulnerability cannot be detected and troubleshooting
-If you find that the vulnerabilities of historical N Day cannot be detected, you can contact [technical support](../../doc/aboutus/support) for help or debug the history of vulnerabilities in order to research.
+If you find that the vulnerabilities of historical N Day cannot be detected, you can contact [technical support](https://hxsecurity.github.io/DongTai-Doc/doc/aboutus/support) for help or debug the history of vulnerabilities in order to research.
 

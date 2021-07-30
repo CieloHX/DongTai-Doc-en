@@ -13,7 +13,7 @@ Log in to [IAST platform](https://iast.huoxian.cn/login) and download the agent 
 CATALINA_OPTS=-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project name>
 ```
 
-![tomact_config_catalina.png](../assets/deploy/manual/tomcat_config_catalina.png)
+![tomact_config_catalina.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/manual/tomcat_config_catalina.png)
 
 -Note: `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 

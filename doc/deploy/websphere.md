@@ -7,15 +7,15 @@ Log in to [IAST platform](https://iast.huoxian.cn/login) and download the IAST A
 #### 2. Configure the WebSphere server
 Enter the management background of the WebSphere WEB side, in the navigation bar on the left side of the console, select `Servers -> Server Types -> WebSphere Application Server` to enter the application list interface:
 
-![app.png](../assets/deploy/websphere/app.png)
+![app.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/websphere/app.png)
  
 Select the application that needs to install the agent (take server1 as an example), and click to enter the management page. Scroll down on the new page, find `Server Infrastructure -> Process definition`, and click to enter:
 
-![server1.png](../assets/deploy/websphere/server1.png)
+![server1.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/websphere/server1.png)
 
 Click `Additional Properties -> Java Virtual Machine` to enter the JVM startup parameter editing interface
 
-![jvmarg.png](../assets/deploy/websphere/jvmarg.png)
+![jvmarg.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/websphere/jvmarg.png)
 
 Find the `Generic JVM arguments` option, start editing and fill in the following content and save `-javaagent:/path/to/agent.jar -Dproject.name=<project name>`
 

@@ -24,12 +24,12 @@ Now, the programmers could focus on code audits and easily discover vulnerabilit
 **DongTai IAST** search function: [***\*https://iast.huoxian.cn/taint/search\****](https://iast.huoxian.cn/taint/search)
 
 1. Specify the vulnerability sink method, such as: org.springframework.expression.Expression.getValue, then search and we could find the HTTP request where the tainted call chain of the sink method is located
-![spring-el](../../doc/assets/bugbountry/search_result.png)
+![spring-el](https://hxsecurity.github.io/DongTai-Doc/doc/assets/bugbountry/search_result.png)
 
 2. After finding the relevant HTTP request, according to the name of agent to judge current HTTP belongs to which open source project
 
 3. View the details of the tainted call chain and the details of the HTTP request
-![taint_link_detail](../../doc/assets/bugbountry/taint_link_detail.png)
+![taint_link_detail](https://hxsecurity.github.io/DongTai-Doc/doc/assets/bugbountry/taint_link_detail.png)
 
 Then according to the prompt of the node, find the specific process of the taint propagation and the upper call of the each method, which could be used to quickly verify and reproduce whether there are other restrictions on the vulnerability.
 
