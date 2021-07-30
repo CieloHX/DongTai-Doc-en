@@ -4,7 +4,7 @@ DongTai IAST includes front-end projects and back-end APIs. The front-end projec
 
 #### Architecture diagram
 
-![framework](../assets/deploy/framework.png)
+![framework](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/framework.png)
 
 ### Localized deployment version [Open source for companies which Joint development]
 The open source version needs to be applied for by yourself, please refer to the application method. [Below](https://jinshuju.net/f/PKPl99)

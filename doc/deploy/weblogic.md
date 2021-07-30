@@ -22,7 +22,7 @@ Visit weblogic's console, for example:
 
 1. Find "Server" under "Environment", and then click on the server that needs to install agent in the server list, such as AdminServer
 
-![adminserver.png](../assets/deploy/weblogic/adminserver.png)
+![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/adminserver.png)
 
 2. Enter the server details, click "Server Start", and fill in the parameters of javaagent in the parameter column below
 ```shell
@@ -31,11 +31,11 @@ JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<pr
 Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
 
-![adminserver.png](../assets/deploy/weblogic/boot.png)
+![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/boot.png)
 
 3. Restart the server to make the configuration take effect
 
-![adminserver.png](../assets/deploy/weblogic/restart.png)
+![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/restart.png)
 
 #### Method two, by modifying weblogic's config.xml file
 
