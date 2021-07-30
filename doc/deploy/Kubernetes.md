@@ -1,0 +1,1 @@
+- [Kubernetes one-click deploy](https://github.com/HXSecurity/dongtai-deploy/blob/main/kubernetes/README.md)

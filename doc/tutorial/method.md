@@ -67,7 +67,7 @@ Record the server address and log information. The data about the user in the lo
 
 #### Method pool data
 
-- Frame classed and JDK classed are recorded as they are，and the class names are hidden for the classes developed by the user.
+- Frame classed and JDK classed are recorded as they are, and the class names are hidden for the classes developed by the user.
 - Tainted data, using the unified unique identification algorithm to calculate the stain, the stain does not transmit data, only transmit the identifier identification corresponding to the stain.
 - Call stack data, call stack data is processed according to the first rule, but the related calling sequence will be saved.
 

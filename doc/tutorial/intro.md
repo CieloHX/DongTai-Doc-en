@@ -16,12 +16,12 @@ Passive IAST deploys the Agent in the application under test, then obtains the c
 ## HuoXian~ DongTai IAST
 1."HuoXian~ DongTai IAST"  is  passive IAST, which with the advantages of near real-time detection, high detection rate, low false alarm rate, low false alarm rate, etc.
 
-2.“HuoXian~ DongTai IAST” don't need replace the data packets，could cover encryption , anti-replay , Verification code etc real Business scene.
+2.“HuoXian~ DongTai IAST” don't need replace the data packets, could cover encryption , anti-replay , Verification code etc real Business scene.
 
-3.“HuoXian~ DongTai IAST” don't produce "dirty data"，don't interfere the work of test.
+3.“HuoXian~ DongTai IAST” don't produce "dirty data", don't interfere the work of test.
 
 ## The Differences between IAST and RASP
-- rasp is used in the production environment to hook taint input methods and dangerous methods, detect whether there are loopholes and intercept; it is not responsible for the complete taint call chain, the detection methods are mainly value matching and some syntax analysis and semantic analysis
+- rasp is used in the production environment to hook taint input methods and dangerous methods, detect whether there are vulnerability and intercept; it is not responsible for the complete taint call chain, the detection methods are mainly value matching and some syntax analysis and semantic analysis
 - iast is used in the test environment, hooks the taint input method, the taint propagation method and the dangerous method, and judges whether there are vulnerabilities based on the value matching algorithm and the taint propagation algorithm
 - In short, rasp is used to analyze whether there is attack data from external taints; iast is used to analyze whether there is an attack exploit chain from external taints.
 - In SDLC, IAST is a tool in the development phase, and RASP is a tool after it goes online; the underlying technical principles of the two tools are the same, and the product focus and detection principles are different

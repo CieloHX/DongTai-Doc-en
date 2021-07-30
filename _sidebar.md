@@ -1,32 +1,33 @@
-- 基本介绍
-  - [简介](doc/tutorial/intro.md)
-  - [洞态IAST快速体验](doc/tutorial/quickstart.md)
-  - [插件快速体验](doc/tutorial/plugin.md)
-  - [产品介绍](doc/tutorial/versions.md)
-  - [检测方法介绍](doc/tutorial/method.md)
-  - [检测能力](doc/tutorial/detects.md)
-  - [兼容性说明](doc/tutorial/compat.md)
-  
-- 漏洞挖掘教程
-  - [入门](doc/bugbountry/quickstart.md)
-  - [高级教程](doc/bugbountry/custom.md)
-  - [自动化漏洞挖掘/检测](doc/bugbountry/flag.md)
-  
-- 安装部署
-  - [Tomcat服务器](doc/deploy/tomcat.md)
-  - [JBoss/Wildfly服务器](doc/deploy/jboss.md)
-  - [Resin服务器](doc/deploy/resin.md)
-  - [Jetty服务器](doc/deploy/jetty.md)
-  - [WebLogic服务器](doc/deploy/weblogic.md)
-  - [WebSphere服务器](doc/deploy/websphere.md)
-  - [SpringBoot框架](doc/deploy/springboot.md)
-  - [Docker部署](doc/deploy/docker.md)
-  - [部署靶场环境](doc/deploy/vulns.md)
+- Basic Introduction
+  - [Introduction](doc/tutorial/intro.md)
+  - [IAST Quick Start](doc/tutorial/quickstart.md)
+  - [IAST IDEA Plugin Quick Start](doc/tutorial/plugin.md)
+  - [Agent Args](doc/tutorial/args.md)
+  - [Agent Data Collection/Detection Principle](doc/tutorial/method.md)
+  - [Detection Capability of The Agent](doc/tutorial/detects.md)
 
-- [最佳实践](doc/practices.md)
+- Agent
+  - [Java](doc/deploy/java.md)
+  - [Python](doc/deploy/python.md)
 
-- [更新日志](doc/changes/changelog.md)
+- Install and deploy
+  - [DongTai Service Architecture](doc/deploy/intro.md)
+  - [Single Deployment](doc/deploy/docker-compose.md)
+  - [Cluster Deployment](doc/deploy/Kubernetes.md)
 
-- [技术支持](doc/aboutus/support.md)
+- [Best Practice](doc/practices.md)
 
-- [Q&A](doc/qa.md)
+- Vulnerability Discovery
+  - [Entry Level](doc/bugbountry/quickstart.md)
+  - [Advanced Level](doc/bugbountry/custom.md)
+  - [Case](doc/bugbountry/example.md)
+
+- Release Note
+  - [Release Note](doc/changes/changelog.md)
+  - [Java Agent Release Note](doc/changes/JavaAgent.md)
+  - [Python Agent Release Note](doc/changes/PythonAgent.md)
+
+- [Q&A]
+  - [QA](doc/qa.md)
+
+- [Technical Support](doc/aboutus/support.md)

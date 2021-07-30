@@ -36,7 +36,7 @@
 
 <h2 id="2">二、DongTai IAST plugin function</h3>
 
-### 1、Quickly add  HOOK rules
+### 1、Quickly add HOOK rules
 
 ####  (1) Configure "Add HOOK Rules"
 

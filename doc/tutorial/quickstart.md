@@ -1,6 +1,6 @@
-> LingZhi IAST has been upgraded to "HuoXian~ DongTai IAST". At the same time, an independent SaaS version is provided, which supports third-party component management, general vulnerability detection, unauthorized vulnerability detection, and component-level vulnerability mining
+> LingZhi IAST has been upgraded to "HuoXian~ DongTai IAST". At the same time, an independent SaaS version is provided, which supports third-party component management, general vulnerability detection, unauthorized vulnerability detection, and component-level vulnerability discovery.
 
-DongTai IAST  SaaS Version：[https://iast.huoxian.cn/login](https://iast.huoxian.cn/login) 
+DongTai IAST SaaS Version：[https://iast.huoxian.cn/login](https://iast.huoxian.cn/login) 
 
 ## Login to IAST  Platform
 

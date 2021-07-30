@@ -48,7 +48,7 @@
 
 1. Vulnerability information adds functions such as viewing and editing of vulnerability status
 2. Migrate the hook rules left on the Agent-end to the cloud
-3. The "range" system increases the basic environment: keycloak13, gocd（from 17 version to 23 version), geoserver(from 2.12 version to 2.18 version), nifi(from 1.2 version to 1.12version), openapi-generator-online(from 3version to 5version); The basic environment can be used for vulnerability verification, vulnerability mining, etc. Welcome to use the “range”.
+3. The "range" system increases the basic environment: keycloak13, gocd（from 17 version to 23 version), geoserver(from 2.12 version to 2.18 version), nifi(from 1.2 version to 1.12version), openapi-generator-online(from 3version to 5version); The basic environment can be used for vulnerability verification, vulnerability discovery, etc. Welcome to use the “range”.
 ****
 
 ***From April 19,2021 to April 23,2021 changelog***

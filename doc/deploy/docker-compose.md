@@ -1,0 +1,2 @@
+- [x] [docker-compose one-click deploy](https://github.com/HXSecurity/dongtai-deploy/blob/main/docker-compose/readme.md)
+- [x] [source code one-click deploy](https://github.com/HXSecurity/dongtai-deploy)

@@ -18,5 +18,4 @@ Log in to [IAST platform](https://iast.huoxian.cn/login) and download the agent 
 ```
 Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
-
 4. Restart Resin
