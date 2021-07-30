@@ -1,22 +1,22 @@
 > Resin 4
 
-#### 手动修改
+#### Manual modification
 
-##### 1.安装Agent.jar
+##### 1. Install Agent.jar
 
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
+Log in to [IAST platform](https://iast.huoxian.cn/login) and download the agent of IAST in the **Deploy IAST**, and put the agent.jar file on the machine where the WEB server (middleware) is located, Ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
  
-##### 2.部署agent
-1.进入Resin的主目录，
+##### 2. Deploy agent
+1. Enter the main content of Resin,
 
-2.打开`conf/cluster-default.xml`文件，定位到`<server-default>`所在的行，
+2. Open the `conf/cluster-default.xml` file and locate the line where `<server-default>` is located,
 
-3.在该行下面插入
+3. Insert below the line
 ```shell
 <jvm-arg>-javaagent:/opt/Resin/iast/agent.jar</jvm-arg>
 <jvm-arg>-Dproject.name=<project name></jvm-arg>
 ```
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
 
-4.重启Resin
+4. Restart Resin

@@ -1,25 +1,24 @@
-#### 手动安装
+#### Manual installation
 
-##### 1.安装Agent.jar
+##### 1. Install Agent.jar
 
-登陆 [IAST平台](https://iast.huoxian.cn/login) 在**部署IAST**中下载洞态IAST的Agent，将agent.jar文件放入WEB服务器（中间件）所在机器上，保证agent.jar文件所在目录具有可写权限，如：`/tmp/`
+Log in to [IAST platform](https://iast.huoxian.cn/login) and download the IAST Agent in the **Deploy IAST**, and put the agent.jar file on the machine where the WEB server (middleware) is located, Ensure that the content where the agent.jar file is located has writable permissions, such as `/tmp/`
 
-#### 2.配置WebSphere服务器
-进入WebSphere WEB端的管理后台，在控制台左侧的导航栏里，选择`Servers -> Server Types -> WebSphere Application Server`，进入应用列表界面：
+#### 2. Configure the WebSphere server
+Enter the management background of the WebSphere WEB side, in the navigation bar on the left side of the console, select `Servers -> Server Types -> WebSphere Application Server` to enter the application list interface:
 
 ![app.png](../assets/deploy/websphere/app.png)
  
-选择需要安装agent的应用（以server1为例），点击进入管理页面。在新页面向下翻，找到`Server Infrastructure -> Process definition`，并点击进入：
+Select the application that needs to install the agent (take server1 as an example), and click to enter the management page. Scroll down on the new page, find `Server Infrastructure -> Process definition`, and click to enter:
 
 ![server1.png](../assets/deploy/websphere/server1.png)
 
-点击`Additional Properties -> Java Virtual Machine`进入JVM启动参数编辑界面
+Click `Additional Properties -> Java Virtual Machine` to enter the JVM startup parameter editing interface
 
 ![jvmarg.png](../assets/deploy/websphere/jvmarg.png)
 
-找到`Generic JVM arguments`选项，开始编辑并在里面填写以下内容并保存`-javaagent:/path/to/agent.jar -Dproject.name=<project name>`
+Find the `Generic JVM arguments` option, start editing and fill in the following content and save `-javaagent:/path/to/agent.jar -Dproject.name=<project name>`
 
-注意，`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
-重启对应修改后的server应用
-
+Restart the corresponding modified server application
