@@ -1,22 +1,21 @@
-#### 社区版安全风险检测能力
-- [x] 命令执行
-- [x] SQL注入，支持常见数据库的sql注入检测，包括mysql、mssql等
-- [x] LDAP注入
-- [x] SMTP注入
-- [x] XPATH注入
-- [x] EL表达式注入
-- [x] Hql注入
-- [x] NoSql注入
-- [x] header头注入
+#### Community Edition Security Risk Detection Capability
+- [x] Command execution
+- [x] SQL injection supports SQL injection detection of common databases, including mysql, MSSQL, etc
+- [x] LDAP injection 
+- [x] SMTP injection 
+- [x] XPATH injection 
+- [x] El expression injection
+- [x] Hql injection
+- [x] NoSql injection
+- [x] header injection
 - [x] XXE
-- [x] 不安全的readline
-- [x] 不安全的重定向
-- [x] 不安全的转发
-- [x] 路径穿越
-- [x] 弱加密算法
-- [x] 弱哈希算法
-- [x] 弱随机数算法
-- [x] 信任边界
-- [x] Cookie未设置secure
-- [x] 第三方组件收集及漏洞检测
-- [x] 反射注入 
+- [x] Unsafe readline
+- [x] Unsafe redirection
+- [x] Unsafe forwarding路径穿越
+- [x] Weak encryption algorithm
+- [x] weak hash algorithm
+- [x] Weak random number algorithm
+- [x] Trust boundary
+- [x] Cookie secure Settins
+- [x] Third-party component collection and vulnerability detection
+- [x] Reflection injection

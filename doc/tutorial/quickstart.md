@@ -1,116 +1,115 @@
-> 灵芝IAST升级为”火线～洞态IAST“，同时，提供独立的SaaS版本，支持第三方组件管理、通用漏洞检测、越权漏洞检测、组件级漏洞挖掘
+> LingZhi IAST has been upgraded to "HuoXian~ DongTai IAST". At the same time, an independent SaaS version is provided, which supports third-party component management, general vulnerability detection, unauthorized vulnerability detection, and component-level vulnerability mining
 
-洞态IAST SaaS版本地址：[https://iast.huoxian.cn/login](https://iast.huoxian.cn/login) 
+DongTai IAST  SaaS Version：[https://iast.huoxian.cn/login](https://iast.huoxian.cn/login) 
 
-## 登录IAST平台
+## Login to IAST  Platform
 
-### 1.注册
+### 1. Register
 
-- 填写 [调查问卷](https://jinshuju.net/f/I9PNmf) 进行注册
+- Fill out the [questionnaire](https://jinshuju.net/f/I9PNmf) to register
   ![register_questionnaire](../../doc/assets/tutorial/register_questionnaire.png)
   
-  **注意**：账号统一在每天上午10点创建
+  Notice：Accounts will be created in 10 o'clock am.
 
-- 提交成功之后生成用户，我们会将用户名和密码发送至您的邮箱，请注意查收
+- We will send you the user name and password to you after registration and generating the user.
 
-### 2.登录
+### 2. Login
 
-- 火线-洞态IAST地址：https://iast.huoxian.cn
+- Login Address：https://iast.huoxian.cn
   
   ![login_iast](../../doc/assets/tutorial/login_iast.png)
 
 
-### 3.修改密码
+### 3. Modify  the password 
 
-- 登录 [IAST平台](https://iast.huoxian.cn/login) 后，点击系统配置，在左边栏中选择密码修改，即可修改密码
+- After logging in to [IAST platform](https://iast.huoxian.cn/login), click on system configuration and select password modification in the left column to modify the password.
 
   ![password_change](../../doc/assets/tutorial/password_changes.png)
 
+## Online Range- Quick Experience of IAST
 
-## 在线靶场 - 快速体验IAST
+- Currently, the online range provides openrasp test environment, BenchMark test environment, etc. You can quickly start the cloud environment through the online range to experience the use process of IAST. The following takes the range mirroring openrasp shooting range environment as an example to demonstrate. ####
 
-目前在线靶场提供了openrasp测试环境、BenchMark测试环境等，可通过在线靶场快速启动云端环境体验 IAST的使用流程，下文以靶场镜像 openrasp的靶场环境为例进行演示。
+#### Configurations of Online Range IAST token
 
-#### 1.在线靶场配置 IAST token
-
-- 登陆[IAST平台](https://iast.huoxian.cn/login)
-- 访问“部署IAST”功能
-- 选择目标应用使用的**开发语言**(Java)
-- 选择对应的操作系统和版本（JDK 1.8及以下选择1.8，JDK 1.8以上选择1.9）
-- 复制 TOKEN 
+- Login to [IAST platform](https://iast.huoxian.cn/login)
+- Access the "Deploy IAST" feature
+- Select the **development language** used by the target application  (Java) 
+- Select the corresponding operating system and version (choose 1.8 for JDK 1.8 and below, choose 1.9 for JDK 1.8 and above)
+- Copy the TOKEN 
 
   ![find_token](../../doc/assets/tutorial/find_tokenn.png)
 
-- 登陆[靶场](https://labs.iast.huoxian.cn) ，靶场账号与 IAST 账号相同
-- 点击系统设置，进入token配置页面，粘贴之前复制的token后，点击修改即可保存
+- Log in to [Range](https://labs.iast.huoxian.cn), the range account is the same as the IAST account
+- Click System Settings, enter the token configuration page, paste the previously copied token, click Modify to save
 
   ![config_token_setting](../../doc/assets/tutorial/config_token_setting.png)
 
 
-#### 2.下载靶场镜像（以镜像 openrasp1-3-6 为例）
+#### 2.Download the shooting range mirror (take the mirror openrasp1-3-6 as an example)
 
-- 以镜像 openrasp1-3-6 为例，点击镜像管理，在对应镜像后点击下载，弹出提示框，开始下载靶场
+- Take the mirror openrasp1-3-6 as an example, click mirror management, click download after the corresponding mirror, and a prompt box will pop up to start downloading the range
 
   ![vulfocus_download](../../doc/assets/tutorial/vulfocus_downloadd.png)
 
-- 下载成功后，查看当前靶场描述项是否有访问路径（例如 openrasp1-3-6 的访问路径为 /wxpay-xxe 和 /vulns），如果有请复制，点击进入靶场，将访问路径粘贴即可访问项目
+- After the download is successful, check whether there is an access path for the current range description item (for example, the access path for openrasp1-3-6 is /wxpay-xxe and /vulns), if so, please copy it, click to enter the range, and paste the access path to access the project
 
   ![vulfocus_downloadd_success](../../doc/assets/tutorial/vulfocus_downloadd_success.png)
 
   ![visit_route](../../doc/assets/tutorial/visit_route.png)
 
-- 项目启动成功后进入[IAST平台](https://iast.huoxian.cn/login) ，可以在系统配置内引擎管理页面看到刚上线的应用
+- After the project is successfully launched, enter [IAST platform](https://iast.huoxian.cn/login), you can see the newly launched application on the engine management page in the system configuration
   
   ![agentManage](../../doc/assets/tutorial/agentManage.png)
 
-#### 3、创建项目
-- 进入**项目配置**页面，点击**新建项目**
+#### 3、Create project
+- Enter the **Project Configuration** page, click **New Project**
 
 ![create project](../../doc/assets/tutorial/project_new.png)
-  
-- 新建项目，填写基本设置后保存
+
+- Create a new project, fill in the basic settings and save
 
 ![create project](../../doc/assets/tutorial/project_edit.png)
 
-#### 4、检测漏洞
-项目创建完成后，即可正常访问应用，触发API检测漏洞；检测到的漏洞可以在**项目详情**页面中看到，也可以在**应用漏洞**页面看到。
+#### 4、Detect vulnerabilities
+After the project is created, you can access the application normally and trigger the API to detect vulnerabilities; the detected vulnerabilities can be seen on the **Project Details** page or on the **Application Vulnerabilities** page.
 
 ![project_detail](../../doc/assets/tutorial/project_detail.png)
 ![project_detail_list](../../doc/assets/tutorial/project_detail_list.png)
 
-## 本地应用 - 安装IAST
-#### 1、下载Agent
-- 登陆[IAST平台](https://iast.huoxian.cn/login)
-- 访问“部署IAST”功能
-- 选择目标应用使用的**开发语言**(Java)
-- 选择对应的操作系统和版本（JDK 1.8及以下选择1.8，JDK 1.8以上选择1.9）
-- 进入下载、配置页面，根据步骤完成下载和配置
+## Local application-install IAST
+#### 1、Download Agent
+- Login to [IAST platform](https://iast.huoxian.cn/login)
+- Access the "Deploy IAST" feature
+- Select the **development language** (Java) used by the target application
+- Select the corresponding operating system and version (choose 1.8 for JDK 1.8 and below, choose 1.9 for JDK 1.8 and above)
+- Enter the download and configuration page, follow the steps to complete the download and configuration
 
 ![get_iast_token](../../doc/assets/tutorial/download_agent.gif)
 
-#### 2、配置agent并启动应用（以SpringBoot为例）
-SpringBoot默认打为`jar`包，通过`java -jar app.jar`的方式启动；在这类SpringBoot上安装agent时，只需要在启动命令上增加一个参数即可：
+#### 2、Configure the agent and start the application ( SpringBoot as example)
+SpringBoot is packaged as `jar` by default and started by the method of `java -jar app.jar`; when installing the agent on this type of SpringBoot, you only need to add a parameter to the startup command:
 
 ```shell
 java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar app.jar
 ```
-注意：`-Dproject.name=<project name>` 为可选参数，`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+Note: `-Dproject.name=<project name>` is an optional parameter, `<project name>` is consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management Perform manual binding.
 
 
-应用启动后，可以在**系统配置**内**引擎管理**页面看到刚上线的agent，若没有指定`-Dproject.name=<project name>`，项目名称默认为`Demo Project`。
+After the application is started, you can see the newly launched agent on the Engine Management page in the **System Configuration**. If `-Dproject.name=<project name>` is not specified, the project name defaults to `Demo Project` .
 
 ![agent_system_manage](../../doc/assets/tutorial/agent_system_manage.png)
 
-#### 3、创建项目
+#### 3、Create project
 
-进入**项目配置**页面，若使用`-Dproject.name=<project name>`参数，agent会自动关联至此。若要关联其他agent，可在设置中自主配置。
+Enter the **Project Configuration** page, if you use the `-Dproject.name=<project name>` parameter, the agent will be automatically associated with it. If you want to associate with other agents, you can configure it independently in the settings.
 
 ![project_new_auto](../../doc/assets/tutorial/project_new_auto.png)
 
 ![project_edit_auto](../../doc/assets/tutorial/project_edit_auto.png)
 
-#### 4、检测漏洞
-项目创建完成后，即可正常访问应用，触发API检测漏洞；检测到的漏洞可以在**项目详情**页面中看到，也可以在**应用漏洞**页面看到。
+#### 4、Detect vulnerabilities
+After the project is created, you can access the application normally and trigger the API to detect vulnerabilities; the detected vulnerabilities can be seen on the **Project Details** page or on the **Application Vulnerabilities** page.
 
 ![project vul](../../doc/assets/tutorial/project_vul.png)
 
