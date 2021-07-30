@@ -1,13 +1,13 @@
-### 收集的数据类型
+### Data collection
 
-- agent心跳数据
-- 错误日志数据
-- 方法池数据
-- 第三方组件数据
+- Agent heartbeat data
+- Error log data 
+- Method pool data
+- Third-party component data
  
-#### **agent**心跳数据
+#### **Agent** heartbeat data
 
-心跳数据包括网络、内存、CPU、磁盘等信息，用于判断应用的负载，自动启停。
+Heartbeat data includes information such as `network`, `memory`, `cpu`, `disk`, etc. which is used to determine the load of the application and automatically start and stop.
 
 ```json
 {
@@ -46,11 +46,11 @@
 
 
 
-#### 错误日志数据
+#### Error log data
 
-记录服务器地址和日志信息，日志中关于用户的数据进行打码处理，可关闭。
+Record the server address and log information. The data about the user in the log is coded and can be closed.
 
-```
+```json
 {
   "type":"0x51",
   "detail":{
@@ -65,11 +65,11 @@
 
 
 
-#### 方法池数据
+#### Method pool data
 
-- 框架类、JDK类，原样记录，针对用户自己开发的类，进行类名隐藏
-- 污点数据，统一使用污点唯一标识算法进行计算，不传输污点数据，只传输污点对应的标识
-- 调用栈数据，调用栈数据依据第一条规则进行处理，但是，会保存相关调用顺序
+- Frame classed and JDK classed are recorded as they are，and the class names are hidden for the classes developed by the user.
+- Tainted data, using the unified unique identification algorithm to calculate the stain, the stain does not transmit data, only transmit the identifier identification corresponding to the stain.
+- Call stack data, call stack data is processed according to the first rule, but the related calling sequence will be saved.
 
 ```json
 {
@@ -104,9 +104,9 @@
 
 
 
-#### 第三方组件数据
+#### Third-party component data
 
-第三方组件数据记录第三方组件的哈希值、路径和名称，用于梳理第三方组件及分析第三方组件对应的漏洞。
+The third-party component data records the hash value, path, and the name of the third-party component, which is used to sort out the third-party component and analyze the vulnerabilities.
 
 ```json
 {
@@ -122,37 +122,37 @@
 }
 ```
 
-### **Hook**方法的类型
+### **Hook** method type 
 
-- Http请求处理的入口方法
-- Request对象获取外部参数的相关方法
-- Response对象设置返回数据的相关方法
-- 污点传播相关的方法:字符串操作(字符串拼接、字符串截取、字符串反转等)、Java集合类型的 操作、Java IO操作(文件IO/网络IO)、加解密方法(Base64加解密、AES/DES加解密、RSA加解 密等)等
-- 触发漏洞相关的方法:SMTP操作方法、发送HTTP请求相关方法、XML解码相关方法、执行系统命 令的相关方法、执行LDAP查询相关的方法、执行XPATH查询相关的方法、文件操作相关的方法、 JSON反序列化相关的方法等
-- 框架层XSS、SQL注入等相关的过滤方法
+- Entry method for `HTTP` request processing.
+- Related methods of `Request` object to obtain external parameters.
+- Related methods of `Response` set returning data.
+- Methods related to taint propagation: string operations(string splicing, string interceptionm string reversal, etc.), Java collection type operations, Java IO operations(file IO/network IO), encryption and decryption methods(Base64 encryption and decryption, AES/DES encryption and decryption, RSA encryption and decryption, etc.)
+- Methods related to triggering vulnerabilities: SMTP operation, sending HTTP requests, XML decoding,executing system commands, executing LDAP queries,  executing XPATH queries, file operations, JSON reverse Serializtion, etc.
+- Framwork layer XSS, SQL injection and other related filtering methods.
 
-#### 数据处理
+#### Data processing 
 
-根据污点的唯一标识，将污点的传播过程完整的标注出来，形成污点方法池，然后将污点标识记污点方 法抽象后，发送至IAST云端，进行后续漏洞分析。
+According to the unique identification of the taint, the propagation process of the taint is completely marked to form a taint method pool, and then the taint identification method is abstracted and sent to the IAST cloud for subsequent vulnerability analysis.
 
-**其中**，唯一标识由数字组成，不包含任务数据，也无法利用标识逆向解析出对应的数据;方法池中的方 法会进行一定程度的抽象，保证可正常还原漏洞，同时隐藏客户相关的命名。
+**Importantly**, the unique identifier is composed of numbers and  does not contain task data, nor can it be used to reversely analyze the corresponding data. the methods will be abstracted to a certain degree to ensure that the vulnerability can be restored normally and hidden Customer-related name at the same time.
 
-### **IAST**云端
+### **IAST** Cloud
 
-云端接受Agent上报的方法池，根据方法及相关污点的唯一标识，计算出方法调用图，然后通过内置的 漏洞策略(或自定义的漏洞策略)，从方法调用图中匹配对应的漏洞链，如果存在链，则漏洞存在;如 果不存在链，则漏洞不存在；
+The cloud accepts the method pool reported by the **Agent**, calculates the method call graph based on the unique identification of the method are related taints, and then uses the built-in vulnerability strategy(or custom vulnerability strategy) to match the corresponding vulnerability chain from the method call graph. If there is a chain, the vulnerability exists, If there is no chain, the vulnerability does not exist,
 
-**如图**
+**As shown in the picture below**
 
 ![method_flow_chart](../assets/features/method_flow_charts.png)
 
-**策略**
+**Strategy**
 
-指定source点和sink点的方法:getParameter() -> ProcessImpl.start()
+Method of specifying source point and sink point : getParameter() -> ProcessImpl.start()
 
-**漏洞链**
+**Vulnerability Chain**
 
 getParameter() -> decode() -> exec() -> exec() -> ProcessBuilder.<init> -> ProcessBuilder.start -> ProcessImpl.start()
 
-**结果**
+**Result**
 
-所以，判定为存在漏洞。
+Therefore, it is determined that there is a vulnerability.
