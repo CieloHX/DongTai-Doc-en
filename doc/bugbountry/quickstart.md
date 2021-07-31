@@ -12,23 +12,23 @@ Huoxian～DongTai IAST’ provides the taint chain of popular Java projects in g
 - Find a way to bypass some limitations of the framework and the system(may could skip this step)
 
 In order to improve the efficiency of digging vulnerabilities and to dig vulnerabilities faster, open the following functions specially:
-- Build a Java project which has the stars more than 2k in github to give programmers to test and avoid repeated setting up of the environment
+- Build a Java project which has the stars more than 2k in github to give programmers to test and avoid repeated setting up of the environment.
 
-- Automatically crawl the interfaces in the above projects, trigger traffic, and generate tainted call chains
+- Automatically crawl the interfaces in the above projects, trigger traffic, and generate tainted call chains.
 
-- Open search function, and support to search the stain call chain of the above-mentioned all items. If find a sink point, we could search all items directly and view all hit vulnerabilities
+- Open search function, and support to search the stain call chain of the above-mentioned all items. If find a sink point, we could search all items directly and view all hit vulnerabilities.
 
 Now, the programmers could focus on code audits and easily discover vulnerabilities.
 
 ### Vulnerability search
-**DongTai IAST** search function: [***\*https://iast.huoxian.cn/taint/search\****](https://iast.huoxian.cn/taint/search)
+**DongTai IAST** search function: [https://iast.huoxian.cn/taint/search](https://iast.huoxian.cn/taint/search)
 
-1. Specify the vulnerability sink method, such as: org.springframework.expression.Expression.getValue, then search and we could find the HTTP request where the tainted call chain of the sink method is located
+1. Specify the vulnerability sink method, such as: org.springframework.expression.Expression.getValue, then search and we could find the HTTP request where the tainted call chain of the sink method is located.
 ![spring-el](https://hxsecurity.github.io/DongTai-Doc/doc/assets/bugbountry/search_result.png)
 
-2. After finding the relevant HTTP request, according to the name of agent to judge current HTTP belongs to which open source project
+2. After finding the relevant HTTP request, according to the name of agent to judge current HTTP belongs to which open source project.
 
-3. View the details of the tainted call chain and the details of the HTTP request
+3. View the details of the tainted call chain and the details of the HTTP request.
 ![taint_link_detail](https://hxsecurity.github.io/DongTai-Doc/doc/assets/bugbountry/taint_link_detail.png)
 
 Then according to the prompt of the node, find the specific process of the taint propagation and the upper call of the each method, which could be used to quickly verify and reproduce whether there are other restrictions on the vulnerability.

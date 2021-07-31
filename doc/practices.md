@@ -1,3 +1,3 @@
-> 洞态IAST的最佳落地实践
+> DongTai IAST best practices
 
-- [洞态IAST在某互联网甲方的落地实践【Pa55w0rd】](https://mp.weixin.qq.com/s/USw4pvYXN69UT6KauNqx0A)
+- [DongTai IAST landing practice in an Internet Party A【Pa55w0rd】](https://mp.weixin.qq.com/s/USw4pvYXN69UT6KauNqx0A)

@@ -1,8 +1,8 @@
 #  IDEA Plugin — DongTai IAST instructions
 
-<h2 id="1">一、DongTai IAST Plugin installation and configuration</h3>
+<h2 id="1">一. DongTai IAST Plugin installation and configuration</h3>
 
-###  1、IDEA install DongTai IAST plugin
+###  1. IDEA install DongTai IAST plugin
 
 - Download DongTai IAST plugin installation package. [Download Link](https://github.com/HXSecurity/DongTai-Plugin-IDEA/releases/download/v1.0/DongTai-Plugin-IDEA.zip)
 
@@ -16,15 +16,15 @@
 
 - Restart IDEA , check the installed plugins, and check whether the DongTai IAST plugin is installed and enable successfully.
 
-###  2、Configure "DongTai IAST Configuration Cloud"
+###  2. Configure "DongTai IAST Configuration Cloud"
 
 - Click **DongTai IAST Configuration Cloud** in **Tools** on the top menu bar of IDEA, and an input box will pop up.
   
   ![plugin_url_configuration](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_url_configs.png)
 
-- Fill in the `agentUrl`、`url`、`Token` parameters.
+- Fill in the `agentUrl`, `url`, `Token` parameters.
   
-  `agentUrl、url`：automatically fill in the URL address of DongTai IAST, you can change it if you need it.
+  `agentUrl, url`：automatically fill in the URL address of DongTai IAST, you can change it if you need it.
   
   `Token`：Log in to the [IAST Platform](https://iast.huoxian.cn/login), obtain **Token** in **the deployment of IAST**.
   
@@ -34,9 +34,9 @@
   
   ![plugin_token_success](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_token_success.png)
 
-<h2 id="2">二、DongTai IAST plugin function</h3>
+<h2 id="2">二. DongTai IAST plugin function</h3>
 
-### 1、Quickly add HOOK rules
+### 1. Quickly add HOOK rules
 
 ####  (1) Configure "Add HOOK Rules"
 
@@ -66,9 +66,9 @@
 
   ![plugin_hook_result](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_result.png)
 
-[comment]: <> (<h4 id="2">二、One-Click configuration of local agent</h4>)
+[comment]: <> (<h4 id="2">二. One-Click configuration of local agent</h4>)
 
-### 2、Run / Debug With IAST
+### 2. Run / Debug With IAST
 
 ####  (1) Function introduction
 
@@ -84,7 +84,7 @@
   
   ![plugin_agent_running](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_agent_add.png)
 
-### 3、View application vulnerabilities in real-time
+### 3. View application vulnerabilities in real-time
 
 - View vulnerability information in real-time in the pulgin.
 

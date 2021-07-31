@@ -7,13 +7,13 @@
 - [x] El expression injection
 - [x] Hql injection
 - [x] NoSql injection
-- [x] header injection
+- [x] Header injection
 - [x] XXE
 - [x] Unsafe readline
 - [x] Unsafe redirection
 - [x] Unsafe forwarding path traversal
 - [x] Weak encryption algorithm
-- [x] weak hash algorithm
+- [x] Weak hash algorithm
 - [x] Weak random number algorithm
 - [x] Trust boundary
 - [x] Cookie secure Settins

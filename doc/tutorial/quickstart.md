@@ -63,7 +63,7 @@ DongTai IAST SaaS Version：[https://iast.huoxian.cn/login](https://iast.huoxian
   
   ![agentManage](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/agentManage.png)
 
-#### 3、Create project
+#### 3. Create project
 - Enter the **Project Configuration** page, click **New Project**
 
 ![create project](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/project_new.png)
@@ -72,14 +72,14 @@ DongTai IAST SaaS Version：[https://iast.huoxian.cn/login](https://iast.huoxian
 
 ![create project](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/project_edit.png)
 
-#### 4、Detect vulnerabilities
+#### 4. Detect vulnerabilities
 After the project is created, you can access the application normally and trigger the API to detect vulnerabilities; the detected vulnerabilities can be seen on the **Project Details** page or on the **Application Vulnerabilities** page.
 
 ![project_detail](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/project_detail.png)
 ![project_detail_list](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/project_detail_list.png)
 
 ## Local application-install IAST
-#### 1、Download Agent
+#### 1. Download Agent
 - Login to [IAST platform](https://iast.huoxian.cn/login)
 - Access the "Deploy IAST" feature
 - Select the **development language** (Java) used by the target application
@@ -88,7 +88,7 @@ After the project is created, you can access the application normally and trigge
 
 ![get_iast_token](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/download_agent.gif)
 
-#### 2、Configure the agent and start the application ( SpringBoot as example)
+#### 2. Configure the agent and start the application ( SpringBoot as example)
 SpringBoot is packaged as `jar` by default and started by the method of `java -jar app.jar`; when installing the agent on this type of SpringBoot, you only need to add a parameter to the startup command:
 
 ```shell
@@ -101,7 +101,7 @@ After the application is started, you can see the newly launched agent on the En
 
 ![agent_system_manage](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/agent_system_manage.png)
 
-#### 3、Create project
+#### 3. Create project
 
 Enter the **Project Configuration** page, if you use the `-Dproject.name=<project name>` parameter, the agent will be automatically associated with it. If you want to associate with other agents, you can configure it independently in the settings.
 
@@ -109,7 +109,7 @@ Enter the **Project Configuration** page, if you use the `-Dproject.name=<projec
 
 ![project_edit_auto](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/project_edit_auto.png)
 
-#### 4、Detect vulnerabilities
+#### 4. Detect vulnerabilities
 After the project is created, you can access the application normally and trigger the API to detect vulnerabilities; the detected vulnerabilities can be seen on the **Project Details** page or on the **Application Vulnerabilities** page.
 
 ![project vul](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/project_vul.png)

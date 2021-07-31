@@ -9,9 +9,9 @@
 - If you use the war package to deploy, the agent installation method is the specific middleware installation method
 
 - If you use `java -jar app.jar` to deploy, add the startup parameter `-javaagent:/path/to/agent.jar` to the startup command, such as
-```shell
-java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar app.jar
-```
+  ```shell
+  java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar app.jar
+  ```
 
 -Note: `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
@@ -20,11 +20,12 @@ java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar app.jar
 1. Enter the content where `tomcat` is located
 
 2. Edit the `catalina.sh` file under the `tomcat/bin` content and add parameters:
-```shell
-CATALINA_OPTS=-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project name>
-```
+  
+    ```shell
+    CATALINA_OPTS=-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project name>
+    ```
 
-![tomact_config_catalina.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/manual/tomcat_config_catalina.png)
+    ![tomact_config_catalina.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/manual/tomcat_config_catalina.png)
 
 - Note: `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
@@ -39,7 +40,7 @@ CATALINA_OPTS=-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project nam
   ```
 - Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
-#### 2.3.2 JBossAS 7、JBossWildfly
+#### 2.3.2 JBossAS 7, JBossWildfly
 
 - Enter the home content of the JBoss container and modify the corresponding configuration file according to the startup type of the current server: standalone, domain
 
@@ -53,7 +54,7 @@ CATALINA_OPTS=-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project nam
 - Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
 
-- **domain mode**
+- **Domain mode**
 
   The current version is the community version, it is not recommended to install Agent in domain mode
 
@@ -86,27 +87,26 @@ CATALINA_OPTS=-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project nam
 
 ### 2.6 WebLogic
 
-#### 2.6.1、通过WebLogic的console控制台
+#### 2.6.1. WebLogic console
 
 Visit weblogic's console, for example:
 
 1. Find "Server" under "Environment", and then click on the server that needs to install agent in the server list, such as AdminServer
 
-![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/adminserver.png)
+    ![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/adminserver.png)
 
 2. Enter the server details, click "Server Start", and fill in the parameters of javaagent in the parameter column below
-```shell
-JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<project name>
-```
+    ```shell
+    JAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/jboss/iast/agent.jar" "-Dproject.name=<project name>
+    ```
 - Note that `-Dproject.name=<project name>` is an optional parameter, `<project name>` should be consistent with the name of the created project, and the agent will be automatically associated with the project; if you do not configure this parameter, you need to enter the project management for manual binding.
 
-
-![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/boot.png)
+    ![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/boot.png)
 
 3. Restart the server to make the configuration take effect
 
-![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/restart.png)
-#### 2.6.2、通过修改weblogic的config.xml文件
+    ![adminserver.png](https://hxsecurity.github.io/DongTai-Doc/doc/assets/deploy/weblogic/restart.png)
+#### 2.6.2. Fix config.xml
 
 - Find the `config.xml` file in the `/u01/oracle/weblogic/user_projects/domains/base_domain/config` content, locate the `<arguments>` tag under the `<server-start>` tag, and add it in the tag Configure as follows:
 `-javaagent:/path/to/agent.jar -Dproject.name=<project name>`
