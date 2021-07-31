@@ -77,12 +77,13 @@ LingZhi IAST v0.3 version launched
 - Supplement the missing rules in HQL injection and SSRF rules
 ****
 
-**July 03,2020 changelog**
+***July 03,2020 changelog***
 LingZhi IAST v0.2 version launched
 - Fix the bug that the agent reported the vulnerability data error under the JDK
 - Add a vulnerability detection rule for OGNL code execution
 - Support windows system
 ****
+
 ***LingZhi IAST v0.1 community version launched***
 
-LingZhi IAST v0.1 community version launched
+- LingZhi IAST v0.1 community version launched

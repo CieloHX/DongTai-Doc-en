@@ -20,4 +20,4 @@ $ vulhub-cli remote start --app fastjson/1.2.24-rce --plugin dongtai --plugin-ar
 $ vulhub-cli remote stop --app fastjson/1.2.24-rce --plugin dongtai
 ```
 
-There is a compatibility problem between the agent of "Huoxian ~ DongTai IAST" and the JDK of the apache solr shooting range in vulhub. The agent cannot be installed temporarily. You can go to the official website `apache solr` to download and deploy by yourself or contact [technical support](/doc/aboutus/support) ). 
+There is a compatibility problem between the agent of "Huoxian ~ DongTai IAST" and the JDK of the apache solr shooting range in vulhub. The agent cannot be installed temporarily. You can go to the official website `apache solr` to download and deploy by yourself or contact [technical support](en-us/doc/aboutus/support) ). 
