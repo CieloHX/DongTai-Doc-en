@@ -53,5 +53,4 @@ There have two main types of IAST security tools which are "active IAST" and "pa
 ### Contact Us
 
 DongTai IAST Officialy WeChat Account
-![dongtai_QRCode.jpg](/doc/assests/img/dongtai_QRCode.jpg)
-
+![dongtai_QRCode.jpg](https://hxsecurity.github.io/DongTai-Doc/doc/assets/aboutus/dongtai_wx.jpg)
