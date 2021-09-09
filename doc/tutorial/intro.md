@@ -1,6 +1,6 @@
-## DongTai IAST
+## DongTai
 
-> Empowering DevSecOps Productivity with an Easier and Secure Ways
+> Focus on Implement DevSecOps Solution for Enterprise
 
 
 ### Introduction
