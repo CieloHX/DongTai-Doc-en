@@ -1,6 +1,6 @@
 ## DongTai IAST
 
-> Empowering DevSecOps productivity with an easier and secure way
+> Empowering DevSecOps Productivity with an Easier and Secure Way
 
 
 ### Introduction
@@ -8,6 +8,7 @@
 DongTai IAST is the first open source IAST project in the world, which is primarily focused on DevSecOps to help enterprises produce safer and better code over the long run. It provides both options on SaaS and On-premise solutions for enterprises to meet the environmental requirements.
 
 [DongTai IAST Project on GitHub](https://github.com/HXSecurity/DongTai)
+
 [DongTai IAST's Officially Website](https://dongtai.io/)
 
 
@@ -52,5 +53,5 @@ There have two main types of IAST security tools which are "active IAST" and "pa
 ### Contact Us
 
 DongTai IAST Officialy WeChat Account
-![dongtai_QRCode.jpg](/doc/assign/img)
+![dongtai_QRCode.jpg](/doc/assests/img/dongtai_QRCode.jpg)
 
