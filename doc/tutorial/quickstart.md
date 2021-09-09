@@ -1,4 +1,4 @@
-> LingZhi IAST has been upgraded to "HuoXian~ DongTai IAST". At the same time, an independent SaaS version is provided, which supports third-party component management, general vulnerability detection, unauthorized vulnerability detection, and component-level vulnerability discovery.
+> LingZhi IAST has been upgraded to "DongTai IAST". An independent SaaS version is provided, which supports third-party component management, common vulnerability detection, unauthorized vulnerability detection, and component-level vulnerability discovery.
 
 DongTai IAST SaaS Version：[https://iast.huoxian.cn/login](https://iast.huoxian.cn/login) 
 
@@ -6,24 +6,24 @@ DongTai IAST SaaS Version：[https://iast.huoxian.cn/login](https://iast.huoxian
 
 ### 1. Register
 
-- Fill out the [questionnaire](https://jinshuju.net/f/I9PNmf) to register
+- Fill out the [online form](https://jinshuju.net/f/I9PNmf) to register
   
   ![register_questionnaire](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/register_questionnaire.png)
   
-  Notice：Accounts will be created in 10 o'clock am.
+  Notice：Accounts will be created at 10 am.
 
-- We will send you the user name and password to you after registration and generating the user.
+- Once the registration is approved, you will receive your username and account. Please check your email.
 
 ### 2. Login
 
-- Login Address：https://iast.huoxian.cn
+- Login URL：https://iast.huoxian.cn
   
   ![login_iast](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/login_iast.png)
 
 
-### 3. Modify  the password 
+### 3. Change your password 
 
-- After logging in to [IAST platform](https://iast.huoxian.cn/login), click on system configuration and select password modification in the left column to modify the password.
+- After logging in to [IAST platform](https://iast.huoxian.cn/login), you can change your password from your settings.
 
   ![password_change](https://hxsecurity.github.io/DongTai-Doc/doc/assets/tutorial/password_changes.png)
 
