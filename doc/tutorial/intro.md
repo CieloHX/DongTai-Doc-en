@@ -1,6 +1,6 @@
 ## DongTai IAST
 
-> Empowering DevSecOps Productivity with an Easier and Secure Way
+> Empowering DevSecOps Productivity with an Easier and Secure Ways
 
 
 ### Introduction
