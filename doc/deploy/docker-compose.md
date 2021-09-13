@@ -1,2 +1,3 @@
+- [x] [DongTai IAST v1.0.3 Deployment Guide](en-us/doc/deploy/release-v1.0.3.md)
 - [x] [docker-compose one-click deploy](https://github.com/HXSecurity/dongtai-deploy/blob/main/docker-compose/readme.md)
 - [x] [source code one-click deploy](https://github.com/HXSecurity/dongtai-deploy)

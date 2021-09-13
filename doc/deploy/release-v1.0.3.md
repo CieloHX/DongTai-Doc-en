@@ -1,4 +1,4 @@
-# DongTai v1.0.3 Deployment Guide
+# DongTai IAST v1.0.3 Deployment Guide
 
 # Deploy
 
@@ -6,7 +6,7 @@
 
 DongTai IAST Lastest Version: v1.0.3
 
-System Requirement: Linux and Mac
+System Requirement: Linux or Mac OS
 
 Notice: 
 Ensure `Docker` and `docker-compose` have been installed in the system environment.
