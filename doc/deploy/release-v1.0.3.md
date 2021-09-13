@@ -68,7 +68,7 @@ a. Both default account name and password is `admin`. You `MUST` change the pass
 
 b. The verification code will show after the database finish the initial settings. If it didn’t show out more than 10 minutes, please report to us in our official QQ or WeChat group.
 
-c. Navigating to `Settings/Service Registration` to set up the `DongTai-OpenAPI` URL first after log in into the platform. Please use public IP and `avoid` using `localhost` or `127.0.0.1`.
+c. Navigating to `Settings/Service Registration` to set up the `DongTai-OpenAPI` URL first after log in into the platform. Please use public IP and `AVOID` using `localhost` or `127.0.0.1`.
 
 ![apiservicepage](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Deploy_api_page.png)
 
