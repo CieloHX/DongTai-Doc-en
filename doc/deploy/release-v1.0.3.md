@@ -49,7 +49,7 @@ chmod u+x build_with_docker_compose.sh
 ```
 
 Notice:
-a. DongTai IAST will need an export port for `DongTai-Web` and `DongTai-OpenApi` services, the default port will be `80` and `8080`. Please check the following port is available. You can modify it during the development or keep the argument blank as default.
+a. DongTai IAST will need an export port for `DongTai-Web` and `DongTai-OpenApi` services, the default port will be `80` and `8000`. Please check the following port is available. You can modify it during the development or keep the argument blank as default.
 
 b. It took 2 – 3 minutes to initial the settings after running the `build_with_docker_compose.sh`.
 
