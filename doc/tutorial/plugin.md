@@ -107,7 +107,6 @@ Otherwise, it will prompt an error message windows. Please check the token and t
 d. You can review and modify the custom rule on `Settings/Custom Rule` in `DongTai IAST Web Service`.
   ![plugin_hook_result](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_result.png)
 
-
 ## Get a Demo Account
 
 - Registration: https://dongtai.io
