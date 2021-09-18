@@ -18,7 +18,7 @@ DongTai IAST Plugin requires the software packages listed below:
 
 - IntelliJ IDEA: `Versions 20.1 to 21.1`
 
-- Hardware: `minmum Dual Core CPU Processors, 4 GB RAM`
+- Hardware: `minimum Dual Core CPU Processors, 4GB RAM`
 
 ## Installing DongTai IAST Plugin for IntelliJ IDEA
 
@@ -26,7 +26,7 @@ DongTai IAST Plugin requires the software packages listed below:
 
 - Download DongTai IAST plugin for IntelliJ IDEA installation package. [Download Link](https://github.com/HXSecurity/DongTai-Plugin-IDEA/releases/download/v1.0/DongTai-Plugin-IDEA.zip)
 
-- Open IntelliJ IDEA and navigate to “Preferences/Plugin”. Selected “Install Plugin from Disk” and then install DongTai IAST IntelliJ IDEA plugin. `dongtai-idea-plugin.zip`
+- Open IntelliJ IDEA and navigate to `Preferences/Plugin`. Selected `Install Plugin from Disk` and then install DongTai IAST IntelliJ IDEA plugin.
   
   ![plugin_download](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_download.png)
 
@@ -40,15 +40,15 @@ DongTai IAST Plugin requires the software packages listed below:
 
 - Navigate to `Tools\DongTaiIAST\Configuration Cloud`on the menu bar.
 
+  ![plugin_url_configuration](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_url_configs.png)
+
 - Fill in the `agentURL`, `URL`, `TOKEN` parameter in the settings window.
   
-  `agentURL`：Fill in `DongTai IAST OpenApi Service URL`.
+  `agentURL`：Fill in `DongTai IAST OpenApi Service URL`
 
   `URL`：Fill in `DongTai IAST Web Service URL`
   
-  `Token`：Log in to the `DongTai IAST Web Service` to obtain the token from `Add Agent\Java` on the menu.
-
-  ![plugin_url_configuration](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_url_configs.png)
+  `Token`：Log in to the `DongTai IAST Web Service` to obtain the token from `Add Agent\Java` on the menu
   
   ![plugin_login](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Deploy_login_page.png)
   
@@ -90,7 +90,7 @@ DongTai IAST plugin also can indentify known vulnerabilities of third-party comp
 
 a. Right-click on the method name and select `Add HOOK Rule`.
 
-b. Set the rule set, rule type, rule details, taint source, taint destination, and inheritance depth.
+b. Set the `rule set`, `rule type`, `rule details`, `source`, `stain target`, and `inheritance depth`.
     
   ![plugin_hook_action](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_action.png)
     
@@ -104,11 +104,11 @@ c. The DongTai IAST event log will return a success message if the rule of Hook 
 Otherwise, it will prompt an error message windows. Please check the token and try again.
   ![plugin_hook_failure](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_failure.png)
 
-d. You can reach and modify the added rule on `Settings/Custom Rule` in `DongTai IAST Web Service`.
+d. You can review and modify the custom rule on `Settings/Custom Rule` in `DongTai IAST Web Service`.
   ![plugin_hook_result](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_result.png)
 
 
-## Apply DongTai IAST Demo Account
+## Get a Demo Account
 
 - Registration: https://dongtai.io
 - DongTai IAST Demo Site：https://demo.iast.io
