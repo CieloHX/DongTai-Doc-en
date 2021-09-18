@@ -1,12 +1,32 @@
-#  IDEA Plugin — DongTai IAST instructions
+##  DongTai IAST Plugin for IntelliJ IDEA
 
-<h2 id="1">一. DongTai IAST Plugin installation and configuration</h3>
+The DongTai IAST plugin for IntelliJ IDEA integrates with the development environment. It is a lightweight plugin option for developers, which works in conjunction with DongTai IAST to add software security testing and remediation functionality from the plugin. During the development stage, it enables developers to have an actionable and easily understands report including vulnerability type, code location, and implement appropriate solutions. 
 
-###  1. IDEA install DongTai IAST plugin
+DongTai IAST for IntelliJ IDEA can detect:
 
-- Download DongTai IAST plugin installation package. [Download Link](https://github.com/HXSecurity/DongTai-Plugin-IDEA/releases/download/v1.0/DongTai-Plugin-IDEA.zip)
+- Dangerous uses of functions and APIs
 
-- Open IDEA settings, choose to install Plugin from Disk, install DongTai IAST plugin installatino package **dongtai-idea-plugin.zip**
+- Third-party component security vulnerabilities identified
+
+DongTai IAST plugin for IntelliJ IDEA also enables the creation of custom rules and personalizes threat coverage strategies according to specific enterprises and industry's needs. For example, developers might need to implement proprietary security guidelines or analyze custom libraries that are not yet covered by DongTai IAST knowledge base of rulepack.
+
+## Requirement
+
+DongTai IAST Plugin requires the software packages listed below:
+
+- Operating Systems: `Windows, Linux and macOS`
+
+- IntelliJ IDEA: `Versions 20.1 to 21.1`
+
+- Hardware: `minmum Dual Core CPU Processors, 4 GB RAM`
+
+## Installing DongTai IAST Plugin for IntelliJ IDEA
+
+#### A. Download and Install
+
+- Download DongTai IAST plugin for IntelliJ IDEA installation package. [Download Link](https://github.com/HXSecurity/DongTai-Plugin-IDEA/releases/download/v1.0/DongTai-Plugin-IDEA.zip)
+
+- Open IntelliJ IDEA and navigate to “Preferences/Plugin”. Selected “Install Plugin from Disk” and then install DongTai IAST IntelliJ IDEA plugin. `dongtai-idea-plugin.zip`
   
   ![plugin_download](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_download.png)
 
@@ -14,82 +34,91 @@
   
   ![plugin_install](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_installs.png)
 
-- Restart IDEA , check the installed plugins, and check whether the DongTai IAST plugin is installed and enable successfully.
+- Restart IntelliJ IDEA after the installation to enable the plugin.
 
-###  2. Configure "DongTai IAST Configuration Cloud"
+#### B. Settings
 
-- Click **DongTai IAST Configuration Cloud** in **Tools** on the top menu bar of IDEA, and an input box will pop up.
+- Navigate to `Tools\DongTaiIAST\Configuration Cloud`on the menu bar.
+
+- Fill in the `agentURL`, `URL`, `TOKEN` parameter in the settings window.
   
+  `agentURL`：Fill in `DongTai IAST OpenApi Service URL`.
+
+  `URL`：Fill in `DongTai IAST Web Service URL`
+  
+  `Token`：Log in to the `DongTai IAST Web Service` to obtain the token from `Add Agent\Java` on the menu.
+
   ![plugin_url_configuration](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_url_configs.png)
-
-- Fill in the `agentUrl`, `url`, `Token` parameters.
   
-  `agentUrl, url`：automatically fill in the URL address of DongTai IAST, you can change it if you need it.
+  ![plugin_login](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Deploy_login_page.png)
   
-  `Token`：Log in to the [IAST Platform](https://iast.huoxian.cn/login), obtain **Token** in **the deployment of IAST**.
+  ![plugin_token_step](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Deploy_add-agent.png)
   
-  ![plugin_login](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_login.png)
-  
-  ![plugin_token_step](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_token_step.png)
-  
-  ![plugin_token_success](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_token_success.png)
+  ![plugin_token_success](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Deploy_java-token.png)
 
-<h2 id="2">二. DongTai IAST plugin function</h3>
 
-### 1. Quickly add HOOK rules
+## Using the DongTai IAST Plugin for IntelliJ IDEA
 
-####  (1) Configure "Add HOOK Rules"
+#### A. Actionable Feedbacks 
 
-- Right-click on the method name to use the HOOK function, and select **Add HOOK Rule**
+- View security bugs in real time during development stage
 
-- Select the rule set, rule type, rule details, taint source, taint destination, and inheritance depth
+There have shortcut buttons of `Run` and `Debug` with DongTai IAST on the upper menu of UI. It can help developers find and fix security vulnerabilities during code development.
+
+a. We use a Spring Boot Application containing `Command Injection` as a demo. Open the application with IntelliJ IDEA and `Run/Debug` with DongTai IAST.
+
+  ![demo_plugin_springboot](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Demo_plugin-springboot.png)
+
+b. Access the application with the following URL `http://localhost:8080/demo/cmdi?var1=l&var2=s`. While the vulnerability was triggered, it will be shown on the vulnerabilities list.
+
+Developer also can review the futher information about the vulnerability from `Detail`.
+
+  ![demo_plugin_springboot](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Demo_plugin-vul-list.png)
+
+
+- API Sitemap
+
+Unlike swagger, DongTai IAST plugin will auto list API Sitemap of the application without any configuration.
+
+- Third-party component security vulnerabilities identified
+
+DongTai IAST plugin also can indentify known vulnerabilities of third-party component. It reducing the risk of using potentially insecure and unstable libraries.
+
+#### B. Customize Rules
+
+- Add a customize HOOK rules
+
+a. Right-click on the method name and select `Add HOOK Rule`.
+
+b. Set the rule set, rule type, rule details, taint source, taint destination, and inheritance depth.
     
-    ![plugin_hook_action](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_action.png)
+  ![plugin_hook_action](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_action.png)
     
-    ![plugin_hook_config](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_config.png)
+  ![plugin_hook_config](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_config.png)
     
-    ![plugin_hook_commit](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_commit.png)
+  ![plugin_hook_commit](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_commit.png)
 
-####  (2) Examples of different results returned after the completion of "Add Hook Rule"  
-
-- If the addition is completed successfully, `Event Log` will prompt that the request was sent successfully.
-  
+c. The DongTai IAST event log will return a success message if the rule of Hook was added; 
   ![plugin_hook_success](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_success.png)
-  
-- If the Token filled is wrong, current dialog will exit and pop up a prompt.
-  
+
+Otherwise, it will prompt an error message windows. Please check the token and try again.
   ![plugin_hook_failure](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_failure.png)
 
-####  (3) View the added HOOK rules  
-
- - Log in to the  [IAST Platform](https://iast.huoxian.cn/login), select custom rules in system configuration. 
-
+d. You can reach and modify the added rule on `Settings/Custom Rule` in `DongTai IAST Web Service`.
   ![plugin_hook_result](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_hook_result.png)
 
-[comment]: <> (<h4 id="2">二. One-Click configuration of local agent</h4>)
 
-### 2. Run / Debug With IAST
+## Apply DongTai IAST Demo Account
 
-####  (1) Function introduction
+- Registration: https://dongtai.io
+- DongTai IAST Demo Site：https://demo.iast.io
 
-- Use the `Run/Debug With IAST` function to start your application, add One-Click IAST , debug and detect vulnerabilities.
+### Contact Us
 
-##### (2) Startup project
-
-- Task an open source project as an example, use `Run / Debug with IAST` to startup the project.
-
-  ![plugin_agent_run](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_run_debug_app.png)
-  
-- The log printed on the console shows that the agent has been added.
-  
-  ![plugin_agent_running](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_agent_add.png)
-
-### 3. View application vulnerabilities in real-time
-
-- View vulnerability information in real-time in the pulgin.
-
-  ![plugin_taint_details](https://hxsecurity.github.io/DongTai-Doc/doc/assets/features/plugin_taint_details.png)
-
+DongTai IAST Officialy WeChat Account
+<div style="text-align:left">
+<img width="100" height="100" alt="dongtai_QRCode.jpg" data-origin="https://hxsecurity.github.io/DongTai-Doc/doc/assets/aboutus/dongtai_wx.jpg" src="https://hxsecurity.github.io/DongTai-Doc/doc/assets/aboutus/dongtai_wx.jpg">
+</div>
 
 
 
