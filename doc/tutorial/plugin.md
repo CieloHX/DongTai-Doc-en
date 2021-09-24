@@ -48,7 +48,7 @@ DongTai IAST Plugin requires the software packages listed below:
 
   `URL`：Fill in `DongTai IAST Web Service URL`
   
-  `Token`：Log in to the `DongTai IAST Web Service` to obtain the token from `Add Agent\Java` on the menu
+  `TOKEN`：Log in to the `DongTai IAST Web Service` to obtain the token from `Add Agent\Java` on the menu
   
   ![plugin_login](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Deploy_login_page.png)
   
@@ -71,7 +71,7 @@ a. We use a Spring Boot Application containing `Command Injection` as a demo. Op
 
 b. Access the application with the following URL `http://localhost:8080/demo/cmdi?var1=l&var2=s`. While the vulnerability was triggered, it will be shown on the vulnerabilities list.
 
-Developer also can review the futher information about the vulnerability from `Detail`.
+Developer also can review the futher information about the vulnerability from `Details`.
 
   ![demo_plugin_springboot](https://hxsecurity.github.io/DongTai-Doc/doc/assets/en_us/Demo_plugin-vul-list.png)
 

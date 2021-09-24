@@ -11,7 +11,7 @@
   - [Python](en-us/doc/deploy/python.md)
 
 - Install and deploy
-  - [DongTai Service Architecture](en-us/doc/deploy/intro.md)
+  - [DongTai IAST Architecture](en-us/doc/deploy/intro.md)
   - [Single Deployment](en-us/doc/deploy/docker-compose.md)
   - [Cluster Deployment](en-us/doc/deploy/Kubernetes.md)
 
